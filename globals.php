@@ -10,11 +10,10 @@ define('_ITEM_MAX_LEN', 20);
 function _db()
 {
 
-    $database_url = parse_url(getenv("JAWSDB_URL"));
-    $database_user_name = $database_url["user"];
-    $database_password = $database_url["pass"];
-    $database_host = $database_url["host"];
-    $database_db = ltrim($database_url["path"], '/');
+    $database_user_name = "t02rp92s6ftmx92u";
+    $database_password = "y0ns8lj573lzw4r3";
+    $database_host = "zpfp07ebhm2zgmrm.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";
+    $database_db = "j8t44ogexz2q0qqy";
 
     $database_connection = "mysql:host={$database_host}; dbname={$database_db}; charset=utf8mb4";
 
