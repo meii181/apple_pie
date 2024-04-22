@@ -21,5 +21,10 @@ function _db()
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
   ];
-  return new PDO($database_connection, $database_user_name, $database_password, $database_options);
+
+  try {
+    return new PDO($database_connection, $database_user_name, $database_password, $database_options);
+  } catch (PDOException $e) {
+    exit("Connection failed: " . $e->getMessage());
+  }
 }
